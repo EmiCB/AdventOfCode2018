@@ -1,11 +1,17 @@
-input = open("D1C1InputTest.txt", "r")
+input = open("D1C1Input.txt", "r")
 frequencies = []
 lastFreq = 0
+stop = False
 
-for line in input:
-    lastFreq += int(line)
-    for x in frequencies:
-        if(x == lastFreq):    # and (frequencies.index(x) != (len(frequencies)-1))
+while stop == False:
+    for line in input:
+        lastFreq += int(line)
+        if lastFreq in frequencies:
             print(lastFreq)
+            stop = True
+            break
         else:
             frequencies.append(lastFreq)
+    input.seek(0)
+    if(stop):
+        break
