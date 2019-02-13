@@ -1,9 +1,10 @@
-input = open("D2C1Input.txt", "r")
+input = open("D2C1InputTest.txt", "r")
 lineLetters = []
 currentLine = ""
 doubles = 0
 triples = 0
 checksum = 0
+nxt = 1
 isDoubleAvailable = True
 isTrippleAvailable = True
 
